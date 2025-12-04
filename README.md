@@ -1,48 +1,106 @@
-# Networking Learning Platform
+# 📡 AIST — Networking Learning Platform (Frontend)
 
-## Overview
-This is an educational platform for learning networking technologies. The platform currently provides three test labs with the ability to configure a virtual router.
+The **frontend** part of an interactive platform for learning networking technologies.
+The platform allows students to practice router configuration, complete labs, and track progress.
 
-**Live Demo:** [AIST - Networking Platform](https://aist-alisagafarovas-projects.vercel.app/)
+🌐 **Live Demo:**
+👉 [Learn Network Technologies from Beginner to Professional](https://aist-frontend-73ux0flrc-alisagafarovas-projects.vercel.app/)
 
-## Features
-- Interactive networking labs
-- Virtual router configuration
-- Step-by-step practical exercises
-- Backend powered by Node.js and MongoDB
+---
 
-## Tech Stack
-- **Frontend:** React, Vercel (for deployment)
-- **Backend:** Node.js, Express, MongoDB
-- **Hosting:** DigitalOcean (backend), Vercel (frontend)
+## 🚀 Features
 
-## Installation & Setup
-### Prerequisites
-- Node.js & npm
+- 🧪 **Interactive networking labs**
+- ⚙️ **Virtual router configuration (Cisco-like interface)**
+- 📘 **Step-by-step practical exercises**
+- 🔗 Full integration with backend REST API
+- 🎨 Modern UI built on React
+- ⚡ Deployed on Vercel
+
+---
+
+## 🛠 Tech Stack
+
+### **Frontend**
+
+- React
+- React Router
+- SCSS Modules
+- Fetch API
+- Vercel (deployment)
+
+### **Backend**
+
+- Node.js
+- Express
 - MongoDB
+- Hosted on DigitalOcean
 
-### Backend Setup
+---
+
+## 📦 Installation & Setup
+
+### 1. Clone the repository
+
 ```sh
-cd backend
-npm install
-node server.js
+git clone https://github.com/alisagafarova/aist-frontend_eng.git
+cd aist-frontend_eng
 ```
 
-### Frontend Setup
+### 2. Install dependencies
+
 ```sh
-cd frontend
 npm install
+```
+
+### 3. Set up environment variables
+
+Create `.env` file in the project root:
+
+```
+REACT_APP_API_BASE_URL=https://your-backend-domain.com
+```
+
+### 4. Run locally
+
+```sh
 npm start
 ```
 
-## Roadmap
-- Adding more labs
-- User authentication & progress tracking
-- Improved UI/UX
+---
 
-## Contributing
-Feel free to fork the repository and submit pull requests.
+## 🔧 Project Structure
 
-## License
-MIT License
+```
+src/
+ ├── components/       # UI components
+ ├── pages/            # App pages (labs, login, register)
+ ├── router/           # Routing configuration
+ ├── styles/           # SCSS modules
+ ├── utils/            # Helper functions
+ └── App.jsx           # Main app file
+```
 
+---
+
+## 📌 Roadmap
+
+- ✔ User registration & login
+- ✔ Router emulation
+- ⏳ Multi-step learning workflow
+- ⏳ Extended lab library
+- ⏳ Dark mode UI
+- ⏳ Admin panel for managing labs
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+Feel free to fork the repo and submit a PR.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
