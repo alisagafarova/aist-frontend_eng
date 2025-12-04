@@ -1,0 +1,315 @@
+.lab_block {
+    display: flex;
+    width: 85%;
+    font-family: "Khand", sans-serif;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.lab_environment {
+    display: flex;
+    gap:10px;
+
+    height: 600px;
+}
+
+.lab_image {
+    width: 90%;
+}
+
+.lab_task h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.lab_task p {
+    font-size: 14px;
+    color: #333;
+}
+
+.lab_task ul {
+    font-size: 14px;
+    color: #5a5a5a;
+}
+
+.lab_task code {
+    font-size: 14px;
+    color: #000000;
+    font-family: "Khand", sans-serif;
+}
+
+.terminal.successBorder {
+    border-color: #28a745;
+    border: solid 5px; /* Зеленая рамка для успешного выполнения */
+}
+
+.terminal.successBorder {
+    border-color: #28a745; /* Зеленая рамка для успешного выполнения */
+}
+
+/* Убедитесь, что lab_terminal имеет относительное позиционирование для кнопки */
+.lab_terminal {
+    position: relative;
+    width: 60%;
+    padding: 20px;
+}
+
+.lab_buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 100%;
+    align-items: center; /* Выравнивает кнопки по вертикали */
+    color: black;
+}
+
+.lab_buttons .left {
+    margin-right: auto; /* Отодвигает кнопку "Вернуться к теме" влево */
+}
+
+.lab_buttons .right {
+    display: flex;
+    gap: 10px;
+ 
+    padding: 20px; /* Расстояние между кнопками справа */
+}
+
+.button_previous{
+    font-family: "Roboto Mono", monospace;
+    width: 170px;
+    height: 45px;
+    font-size: 13px;
+    background-color: #EFDA38;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    text-decoration: none;
+    -webkit-appearance: none; /* Убирает стили браузера */
+    appearance: none; /* Убирает стили браузера */
+    color: black;
+    
+}
+
+.button_previous:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.resetButton {
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 0;
+    position: relative;
+
+    /* Для всплывающей подсказки */
+    &[data-tooltip]::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 100%; /* Расположение над кнопкой */
+        left: 100%;
+        transform: translateX(-50%);
+        // background-color: #706f6f;
+        border: solid #706f6f 1px;
+        color: #000000;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-family: "Roboto Mono", monospace;
+        white-space: nowrap; /* Не переносить текст */
+        opacity: 0; /* Изначально скрыта */
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+&[data-tooltip]:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px); /* Анимация появления */
+}
+}
+
+.image_button {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    font-family: "Roboto Mono", monospace;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0); /* Градиент для фона */
+    border-radius: 15px;
+    width: 45%; /* Увеличенная ширина */
+    max-width: 90%; /* Ограничение по ширине экрана */
+    padding: 30px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+  }
+  
+  .modal h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+  
+  .modal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .modal li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    
+  }
+  
+  .modal li::before {
+    content: '•'; /* Маркер перед подсказкой */
+    color: #000000;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .commandStyle {
+    display: block;
+    background-color: #f4f4f4; /* Светлый фон для кода */
+    color: #333; /* Темный текст */
+    font-family: 'Courier New', Courier, monospace; /* Моноширинный шрифт */
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-left: 4px solid #408c88; /* Синяя полоса сбоку */
+    white-space: pre-wrap; /* Сохраняет форматирование */
+  }
+  
+  
+  .closeButton {
+    background-color: transparent;
+    border: none;
+    color: #555;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+  }
+  
+  .closeButton:hover {
+    color: #007bff;
+  }
+  
+
+  /* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .lab_block {
+      width: 100%; /* Используем всю ширину экрана */
+      padding: 10px;
+      
+    }
+  
+    .lab_environment {
+      flex-direction: column; /* Вертикальное расположение блоков */
+      height: auto; /* Высота по содержимому */
+      gap: 20px;
+    }
+  
+    .lab_terminal {
+      width: 100%; /* Терминал занимает всю ширину */
+      padding: 15px;
+    }
+  
+    .lab_buttons {
+ 
+        align-self: center;
+        width: 80%;
+      flex-direction: row; /* Кнопки располагаются вертикально */
+      justify-content: space-around;
+      margin-top: 20px;
+      gap: 20px;
+    }
+
+
+.lab_buttons .right {
+ 
+    padding: 0px; /* Расстояние между кнопками справа */
+}
+  
+    .button_previous {
+      width: 100%; /* Кнопка занимает всю ширину */
+      height: auto;
+      padding: 10px;
+      font-size: 10px;
+    
+    }
+  
+    .resetButton {
+      width: 40px; /* Уменьшенная кнопка */
+      height: 40px;
+    }
+  
+    .modal {
+      width: 70%; /* Модальное окно занимает почти весь экран */
+      padding: 20px; /* Уменьшенные отступы */
+      font-size: 14px;
+    }
+  
+    .modal h3 {
+      font-size: 16px; /* Уменьшенный размер заголовка */
+    }
+  
+    .modal li {
+      font-size: 14px; /* Уменьшенный размер текста списка */
+    }
+  
+    .closeButton {
+      font-size: 25px; /* Чуть меньшая кнопка закрытия */
+    }
+  
+    .intro_button,
+    .go_button {
+      width: 100%; /* Кнопки занимают всю ширину */
+      font-size: 10px; /* Увеличенный текст для удобства на мобильных */
+      padding: 15px;
+    }
+  
+    .lab_task p,
+    .lab_task ul {
+      font-size: 12px; /* Уменьшенный размер текста */
+    }
+  
+    .commandStyle {
+      font-size: 12px; /* Меньший размер шрифта для команд */
+      padding: 10px; /* Уменьшенные отступы */
+    }
+  }
+  
